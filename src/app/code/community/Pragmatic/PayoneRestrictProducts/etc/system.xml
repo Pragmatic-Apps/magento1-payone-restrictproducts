@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payoneext_restrict translate="label" module="pragmatic_payonerestrictproducts">
+			<label>Ext: Product Restriction</label>
+			<tab>payone</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>Geneal</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>999</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enable product restriction</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Check if payment methods are enabled</comment>
+						</active>
+						<methods translate="label">
+							<label>Payment methods to check</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>pragmatic_payonerestrictproducts/system_config_source_payment</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Check if payment methods are enabled</comment>
+						</methods>
+						<skipskus translate="label">
+							<label>Disallowed SKUs</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>SKUs that are not allowed to sell with the selected payment methods (comma-seperated)</comment>
+						</skipskus>
+					</fields>
+				</general>
+			</groups>
+		</payoneext_restrict>
+	</sections>
+</config>

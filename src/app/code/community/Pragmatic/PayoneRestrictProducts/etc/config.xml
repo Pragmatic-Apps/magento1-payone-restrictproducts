@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pragmatic_PayoneRestrictProducts>
+            <version>1.0.0</version>
+        </Pragmatic_PayoneRestrictProducts>
+    </modules>
+    <global>
+        <helpers>
+            <pragmatic_payonerestrictproducts>
+                <class>Pragmatic_PayoneRestrictProducts_Helper</class>
+            </pragmatic_payonerestrictproducts>
+        </helpers>
+        <models>
+            <pragmatic_payonerestrictproducts>
+                <class>Pragmatic_PayoneRestrictProducts_Model</class>
+            </pragmatic_payonerestrictproducts>
+        </models>
+        <events>
+            <payment_method_is_active>
+                <observers>
+                    <payment_method_is_active_payonerestrictproducts>
+                        <type>model</type>
+                        <class>pragmatic_payonerestrictproducts/observer</class>
+                        <method>isPaymentMethodAvailable</method>
+                    </payment_method_is_active_payonerestrictproducts>
+                </observers>
+            </payment_method_is_active>
+        </events>
+    </global>
+</config> 

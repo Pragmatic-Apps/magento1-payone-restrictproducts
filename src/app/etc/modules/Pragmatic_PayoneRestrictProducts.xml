@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Pragmatic_PayoneRestrictProducts>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>1.0.0</version>
+      <depends>
+        <Payone_Core/>
+      </depends>
+    </Pragmatic_PayoneRestrictProducts>
+  </modules>
+</config>
